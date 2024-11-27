@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ms-document
+#  config:
+#    import:
+#      - 'classpath:application-core.yml'
+server:
+  port: 8091

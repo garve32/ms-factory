@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: ms-core
+  datasource:
+    hikari:
+      common:
+        jdbc-url: jdbc:h2:mem:tenant0_db;INIT=RUNSCRIPT FROM 'classpath:h2init/schema.sql'\;RUNSCRIPT FROM 'classpath:h2init/data0.sql'
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+        pool-name: common-cp
+        maximum-pool-size: 5
+      tenant1:
+        jdbc-url: jdbc:h2:mem:tenant1_db;INIT=RUNSCRIPT FROM 'classpath:h2init/schema.sql'\;RUNSCRIPT FROM 'classpath:h2init/data1.sql'
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+        pool-name: company1-cp
+        maximum-pool-size: 5
+      tenant2:
+        jdbc-url: jdbc:h2:mem:tenant2_db;INIT=RUNSCRIPT FROM 'classpath:h2init/schema.sql'\;RUNSCRIPT FROM 'classpath:h2init/data2.sql'
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+        pool-name: company2-cp
+        maximum-pool-size: 3
+      tenant3:
+        jdbc-url: jdbc:h2:mem:tenant3_db;INIT=RUNSCRIPT FROM 'classpath:h2init/schema.sql'\;RUNSCRIPT FROM 'classpath:h2init/data3.sql'
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+        pool-name: company3-cp
+        maximum-pool-size: 4
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+#logging:
+#  level:
+#    com.zaxxer.hikari: TRACE
+#    com.zaxxer.hikari.HikariConfig: DEBUG
+jwt:
+  secret: 5kZHdTLiJrNc6UnoRALCax20FRk9kqtDzDkL2NDgeC0=
+  access-token-expiry: 86400
+  refresh-token-expiry: 525600

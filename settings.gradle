@@ -1,0 +1,5 @@
+rootProject.name = 'ms-factory'
+include 'ms-core'
+include 'ms-document'
+include 'ms-gateway'
+include 'ms-visit'
