@@ -1,21 +1,21 @@
-plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.3.6'
-	id 'io.spring.dependency-management' version '1.1.6'
-}
-
-group = 'com.hanwha'
-version = '0.0.1-SNAPSHOT'
-
-java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
-}
-
-repositories {
-	mavenCentral()
-}
+//plugins {
+//	id 'java'
+//	id 'org.springframework.boot' version '3.3.6'
+//	id 'io.spring.dependency-management' version '1.1.6'
+//}
+//
+//group = 'com.hanwha'
+//version = '0.0.1-SNAPSHOT'
+//
+//java {
+//	toolchain {
+//		languageVersion = JavaLanguageVersion.of(21)
+//	}
+//}
+//
+//repositories {
+//	mavenCentral()
+//}
 
 dependencies {
 	implementation project(':ms-core')

@@ -1,0 +1,9 @@
+- client에 요청을 필터링 해야되는경우
+- client 비정상적 요청 header, cookie 정보들을 위변조를 필터링 해야되는경우
+- client요청을 public망에서 private망에 있는 서버에 정보를 전달받고 응답해야하는경우
+- 인증 인가를 처리하는경우
+- Rest Api Route white list 관리
+- Rest Api Header 정보를 데코레이터 하는경우
+- Rest Api URI Path 유추안되도록 하는작업
+- SSR 랜더링 작업
+- circuit breakers(resisence4j) 처리

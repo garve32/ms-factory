@@ -1,4 +1,4 @@
-package com.hanwha.msgateway.datasource;
+package com.hanwha.msauth.datasource;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

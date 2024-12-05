@@ -7,25 +7,24 @@ plugins {
 bootJar.enabled = false
 jar.enabled = true
 
-allprojects {
-    group = 'com.hanwha'
-    version = '0.0.1-SNAPSHOT'
-}
-
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}
-
+//allprojects {
+//
+//}
 
 subprojects {
+
+    group = 'com.hanwha'
+    version = '0.0.1-SNAPSHOT'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
 
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
-
 
     configurations {
         compileOnly {
@@ -39,6 +38,8 @@ subprojects {
 
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter'
+        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
 
@@ -47,8 +48,6 @@ subprojects {
 
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 
     }
 }

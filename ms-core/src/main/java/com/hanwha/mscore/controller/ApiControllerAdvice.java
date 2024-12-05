@@ -13,6 +13,7 @@ public class ApiControllerAdvice {
     protected ApiResponse<?> handleRuntimeException(RuntimeException e) {
         log.error("Got RuntimeException: {}", e.getMessage(), e);
 
+
         return ApiResponse.builder()
             .code(HttpStatus.INTERNAL_SERVER_ERROR.value())
             .message(e.getMessage())
